@@ -29,3 +29,25 @@ jobs:
           cd vcpkg
           ./bootstrap-vcpkg.bat
           ./vcpkg.exe install gperf:x64-windows openssl:x64-windows zlib:x64-windows
+
+      - name: Create Build Directory
+        run: |
+          cd ..
+          rm -rf build
+          mkdir build
+          cd build
+
+      - name: Build
+        run: |
+          cmake -A x64 -DCMAKE_INSTALL_PREFIX:PATH=.. -DCMAKE_TOOLCHAIN_FILE:FILEPATH=../vcpkg/scripts/buildsystems/vcpkg.cmake ..
+          cmake --build . --target install --config Release
+
+      - name: View Build Result
+        run: |
+          cd ../..
+          ls -l telegram-bot-api/bin/telegram-bot-api*
+   
+      - uses: actions/upload-artifact@v4
+        with:
+          name: bin
+          path: telegram-bot-api/bin/telegram-bot-api # or path/to/artifact
