@@ -23,4 +23,4 @@ cmake --build . --target install
 cd ../td
 php SplitSource.php --undo
 cd ../..
-ls -l telegram-bot-api/bin/telegram-bot-api*
+ls -l telegram-bot-api*
