@@ -64,6 +64,9 @@ jobs:
           cd ..
           #Remove-Item build -Force -Recurse -ErrorAction SilentlyContinue
           mkdir build
+          cd ..
+          tree
+          cd telegram-bot-api
           cd build
           tree
 
