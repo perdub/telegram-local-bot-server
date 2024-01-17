@@ -69,6 +69,8 @@ jobs:
           cd telegram-bot-api
           cd build
           tree
+          mkdir 'D:/a/telegram-local-bot-server/telegram-local-bot-server/telegram-bot-api/build'
+          cd 'D:/a/telegram-local-bot-server/telegram-local-bot-server/telegram-bot-api/build'
 
       - name: Build
         run: |
