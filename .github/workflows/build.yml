@@ -60,11 +60,12 @@ jobs:
                     }
                 }
              } 
-          GetFiles
+          #GetFiles
           cd ..
           Remove-Item build -Force -Recurse -ErrorAction SilentlyContinue
           mkdir build
           cd build
+          $PWD
 
       - name: Build
         run: |
