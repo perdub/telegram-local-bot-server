@@ -25,7 +25,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: bin
-          path: telegram-bot-api/bin/telegram-bot-api
+          path: telegram-bot-api/
         
   # This workflow contains a single job called "build"
   build-win:
@@ -65,7 +65,7 @@ jobs:
           #Remove-Item build -Force -Recurse -ErrorAction SilentlyContinue
           mkdir build
           cd build
-          $PWD
+          tree
 
       - name: Build
         run: |
