@@ -21,6 +21,7 @@ jobs:
         run: |
           chmod +x linux.sh
           ./linux.sh
+          tree
 
       - uses: actions/upload-artifact@v4
         with:
@@ -66,9 +67,9 @@ jobs:
           mkdir build
           cd ..
           tree
-          #cd telegram-bot-api
+          ##cd telegram-bot-api
           #cd build
-          tree
+          tree /f
           mkdir 'D:/a/telegram-local-bot-server/telegram-local-bot-server/telegram-bot-api/build'
           cd 'D:/a/telegram-local-bot-server/telegram-local-bot-server/telegram-bot-api/build'
 
