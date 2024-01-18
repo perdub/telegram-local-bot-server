@@ -26,7 +26,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: bin
-          path: telegram-bot-api/
+          path: telegram-bot-api/bin
         
   # This workflow contains a single job called "build"
   build-win:
