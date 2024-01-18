@@ -35,4 +35,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: bin
-          path: telegram-bot-api/bin/telegram-bot-api # or path/to/artifact
+          path: telegram-bot-api/bin
