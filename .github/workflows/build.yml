@@ -31,6 +31,14 @@ jobs:
           name: windows-bin
           path: telegram-bot-api/bin
 
+  build-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: |
+          docker build -t telegram_bot_api .
+
   telegram-post:
     runs-on: ubuntu-latest
     needs: [build-linux, build-win]
